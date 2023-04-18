@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import mockData from './mock-data.json';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PS6';
+  data: any | undefined;
+
+  fetchData(): void {
+    this.data = mockData;
+  }
 }
+
